@@ -1,0 +1,5 @@
+# personal instagram data
+followers_*.json
+following.json
+
+.DS_Store
