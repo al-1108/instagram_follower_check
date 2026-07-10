@@ -29,7 +29,7 @@ python3 filter_accounts.py
 
 the filter one asks for your instagram login (not saved anywhere) and can take a while (for instance, an account with 200 followers and following would take around a minute) to run.
 
-don't spam the filter version - it hits instagram's api through your account and too many runs can get you rate limited.
+don't spam the filter version - it hits instagram's api through your account and too many runs can get you rate limited. you could log in with a burner account instead to keep your main safe (the lookups work from any account) - just don't use a brand new burner, let it age a bit with a profile pic and some normal activity or instagram will flag it fast.
 
 ## config
 

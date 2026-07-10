@@ -16,11 +16,16 @@ with open("followers_1.json") as f:
 with open("following.json") as f:
     following_data = json.load(f)
 
-followers = {item["string_list_data"][0]["value"] for item in followers_data}
-following = {item["title"] for item in following_data["relationships_following"]}
+not_following_back = set()
 
-not_following_back = following - followers
-print(f"checking {len(not_following_back)} accounts\n")
+for item in following_data["relationships_following"]:
+    not_following_back.add(item["title"])
+
+for item in followers_data:
+    if item["string_list_data"][0]["value"] in not_following_back:
+        not_following_back.remove(item["string_list_data"][0]["value"])
+        
+print(f"\nchecking {len(not_following_back)} accounts\n")
 
 username = input("instagram username: ")
 password = input("instagram password: ")
