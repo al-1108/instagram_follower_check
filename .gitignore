@@ -2,4 +2,6 @@
 followers_*.json
 following.json
 
+.venv/
+
 .DS_Store

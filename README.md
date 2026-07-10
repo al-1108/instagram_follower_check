@@ -11,7 +11,13 @@ two versions:
 
 1. get your data: instagram → settings → accounts center → download your information → followers and following. pick **JSON** and **All time** 
 2. drop `followers_1.json` and `following.json` into the version folder you're using
-3. if you're using the filter version: `pip3 install instagrapi`
+3. if you're using the filter version, set up the venv (from the repo root):
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## run
 
@@ -23,6 +29,7 @@ python3 instagram.py
 or
 
 ```
+source .venv/bin/activate   # if not already active
 cd filter
 python3 filter_accounts.py
 ```
