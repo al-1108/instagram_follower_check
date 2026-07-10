@@ -30,3 +30,8 @@ python3 filter_accounts.py
 the filter one asks for your instagram login (not saved anywhere) and can take a while (for instance, an account with 200 followers and following would take around a minute) to run.
 
 don't spam the filter version - it hits instagram's api through your account and too many runs can get you rate limited.
+
+## config
+
+`MAX_FOLLOWERS` at the top of `filter_accounts.py` sets the celebrity cutoff - anyone with more followers than this gets skipped. default is 20000, raise or lower it to taste.
+
