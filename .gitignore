@@ -1,6 +1,8 @@
 # personal instagram data
 followers_*.json
 following.json
+hall_of_shame.json
+account_cache.json
 
 .venv/
 

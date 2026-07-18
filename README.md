@@ -42,3 +42,7 @@ don't spam the filter version - it hits instagram's api through your account and
 
 `MAX_FOLLOWERS` at the top of `filter_accounts.py` sets the celebrity cutoff - anyone with more followers than this gets skipped. default is 20000, raise or lower it to taste.
 
+## hall of shame
+
+every account confirmed as not following you back (celebrities and deleted accounts excluded) gets recorded in `filter/hall_of_shame.json`, along with follower/following counts and the date first seen. it builds up across runs instead of resetting each time.
+
