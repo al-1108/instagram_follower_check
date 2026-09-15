@@ -4,6 +4,7 @@ import os
 import random
 import time
 from datetime import date
+from getpass import getpass
 
 logging.disable(logging.CRITICAL)
 
@@ -14,6 +15,7 @@ MAX_FOLLOWERS = 20000
 HALL_OF_SHAME_FILE = "hall_of_shame.json"
 ACCOUNT_CACHE_FILE = "account_cache.json"
 USE_ACCOUNT_CACHE = True  # toggle to False to re-check every account via the API instead of using cached results
+HIDE_PASSWORD = True  # toggle to False to show the password while typing
 
 with open("followers_1.json") as f:
     followers_data = json.load(f)
@@ -45,7 +47,7 @@ for item in followers_data:
 print(f"\nchecking {len(not_following_back)} accounts\n")
 
 username = input("instagram username: ")
-password = input("instagram password: ")
+password = getpass("instagram password: ") if HIDE_PASSWORD else input("instagram password: ")
 
 print(f"\nAuthenticating...")
 
